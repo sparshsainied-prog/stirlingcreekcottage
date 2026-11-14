@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en-AU" class="nojs">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className="js";</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Stirling Creek Cottage | A timber house by the creek in Stirling, Adelaide Hills</title>
+<meta name="description" content="Three bedrooms, sleeps six, a log fire and a running creek, five minutes' walk from Stirling village. A website idea made by Lamplit Studio for Stirling Creek Cottage.">
+<meta property="og:title" content="Stirling Creek Cottage">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Stirling Creek Cottage. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stirlingcreekcottage/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stirlingcreekcottage/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23b4501a'/%3E%3Cg stroke='%23fbfaf7' stroke-width='1.6'%3E%3Cpath d='M16 1v30M1 16h30M5.4 5.4l21.2 21.2M26.6 5.4 5.4 26.6'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3' fill='%2323261d'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/boards-wide.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/boards-tall.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Colours sampled from their own photos (see brand.md):
+   pine canopy in shade, white plaster walls, the Silvertop Ash ceiling, the rammed earth wall, the weathered cladding.
+   Comfortaa is the rounded face their own site sets the name in; Karla is for reading. */
+:root{
+  --pine:#23261d;
+  --pine-soft:#4a4d3f;
+  --wall:#fbfaf7;
+  --ash:#b4501a;
+  --ash-deep:#963f12;
+  --earth:#f1d6a8;
+  --earth-soft:#f7e8cc;
+  --board:#8f7462;
+  --line:#e4ddd0;
+  --display:"Comfortaa","Avenir Next","Century Gothic",sans-serif;
+  --text:"Karla","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--wall);color:var(--pine);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ash-deep)}
+:focus-visible{outline:3px solid var(--ash);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+figure{margin:0}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:50;background:var(--wall);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--pine);color:var(--wall);font-size:14px;text-align:center;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+/* Header over the hero */
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px var(--gut-r) 0 var(--gut)}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--wall)}
+.mark svg{width:34px;height:34px;flex:none}
+.mark span{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.15;text-shadow:0 1px 10px rgba(20,22,15,.55)}
+.top nav{display:flex;gap:22px;align-items:center;font-size:16px;font-weight:500}
+.top nav a{color:var(--wall);text-decoration:none;text-shadow:0 1px 10px rgba(20,22,15,.6)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--ash);color:#fff;white-space:nowrap}
+.btn:hover{background:var(--ash-deep)}
+.top nav .btn{background:var(--wall);color:var(--pine);text-shadow:none}
+.top nav .btn:hover{background:var(--earth-soft)}
+.btn.line{background:transparent;color:var(--pine);box-shadow:inset 0 0 0 2px var(--pine)}
+.btn.line:hover{background:var(--earth-soft)}
+@media (max-width:860px){.top nav a:not(.btn){display:none}}
+@media (max-width:400px){.mark span{font-size:16px}.mark svg{width:28px;height:28px}.top nav .btn{padding:0 14px;font-size:15px}}
+
+/* ---------- Hero: the boards part, the house appears, then you go in under the ceiling ---------- */
+.mill{position:relative;height:340vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--pine)}
+.stage::after{content:"";position:absolute;inset:0 0 auto 0;height:150px;z-index:6;pointer-events:none;background:linear-gradient(rgba(20,22,15,.55),rgba(20,22,15,0))}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.plane img{width:100%;height:100%;object-fit:cover}
+.house img{object-position:50% 40%}
+.house{transform-origin:62% 38%}
+.inside{transform-origin:50% 40%}
+.inside img{object-position:40% 50%}
+.boards{position:absolute;inset:0;z-index:5;pointer-events:none}
+.board{position:absolute;left:-1px;right:-1px;overflow:hidden;will-change:transform}
+.board .grain{position:absolute;left:0;right:0}
+.board .grain img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+/* each strip gets a shadow line along its top, like the overlap of one board on the next */
+.board::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:rgba(35,26,18,.35)}
+.copy-a{position:absolute;z-index:8;left:var(--gut);top:clamp(96px,16vh,150px);max-width:min(600px, calc(100% - 40px));
+  background:var(--pine);color:var(--wall);padding:clamp(20px,2.6vw,34px) clamp(22px,2.8vw,38px);border-radius:6px;will-change:transform,opacity}
+.copy-a .where{font-size:16px;color:var(--earth)}
+.copy-a h1{font-size:clamp(40px,5.6vw,80px);margin-top:10px}
+.copy-a p.lede{font-size:clamp(18px,1.5vw,20px);margin-top:14px;max-width:28em}
+.cue{position:absolute;z-index:7;opacity:0;will-change:opacity,transform;color:var(--wall)}
+.cue .panel{background:rgba(35,38,29,.86);padding:20px 24px;border-radius:6px}
+.cue h2{font-size:clamp(26px,3vw,40px)}
+.cue p{margin-top:10px;font-size:17px}
+.cue-house{right:var(--gut-r);bottom:clamp(28px,8vh,80px);max-width:440px}
+.cue-inside{left:var(--gut);bottom:clamp(28px,8vh,80px);max-width:520px}
+@media (max-height:640px){.copy-a{top:84px}.copy-a h1{font-size:clamp(34px,5vw,52px)}.copy-a p.lede{display:none}}
+@media (max-width:699px){
+  .mill{height:300vh}
+  .copy-a{top:84px;right:var(--gut-r)}
+  .cue-house,.cue-inside{left:var(--gut);right:var(--gut-r);bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+  .cue p{font-size:16px}
+}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1180px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-style:italic;font-size:clamp(20px,1.9vw,24px);line-height:1.45}
+.who{font-size:15px;color:var(--pine-soft);margin-top:8px}
+.cap{font-size:15px;color:var(--pine-soft);margin-top:10px}
+h2.big{font-size:clamp(36px,4.8vw,62px)}
+
+/* Creek: the wide photo wipes open from the top as it arrives */
+.creek{padding-block:clamp(72px,10vw,140px)}
+.creek .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.reveal{clip-path:inset(0 0 var(--wipe,0%) 0);border-radius:6px;overflow:hidden}
+.reveal img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.creek .lede{margin-top:18px}
+.creek blockquote{margin:28px 0 0;padding:0}
+.creek .fire{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.creek .fire img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+@media (max-width:860px){.creek .inner{grid-template-columns:1fr}}
+
+/* The house: facts, then a pinned rail of rooms */
+.house-s{background:var(--earth-soft)}
+.house-head{padding-block:clamp(64px,8vw,110px) 28px}
+.house-head .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px)}
+.house-s .lede{margin-top:18px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:16px;padding-top:1px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid #e6cfa6;padding-bottom:12px}
+@media (max-width:860px){.house-head .inner{grid-template-columns:1fr}}
+.pan{position:relative}
+.pan-stage{overflow:hidden}
+.rail{display:flex;gap:18px;padding:12px var(--gut-r) clamp(56px,7vw,96px) var(--gut);will-change:transform}
+.rail figure{flex:0 0 auto;width:clamp(280px,34vw,520px)}
+.rail figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;background:var(--earth)}
+.rail figcaption{font-size:16px;margin-top:10px}
+.pan.pinned{height:var(--pan-h,300vh)}
+.pan.pinned .pan-stage{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center}
+.pan.pinned .rail{padding-bottom:12px}
+.pan.pinned .rail figure{width:min(calc(62vh * 4 / 3), 62vw)}
+@media (max-width:899px) and (orientation:portrait){
+  .pan.pinned .rail{gap:12px}
+  .pan.pinned .rail figure{width:min(80vw, calc(60svh * 4 / 5))}
+  .pan.pinned .rail figure img{aspect-ratio:4/5}
+}
+.pan:not(.pinned) .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.pan:not(.pinned) .rail::-webkit-scrollbar{display:none}
+.pan:not(.pinned) .rail figure{scroll-snap-align:start;width:min(78vw,520px)}
+
+/* The build: a log end that splits into its wedges */
+.build{background:var(--pine);color:var(--wall);padding-block:clamp(72px,10vw,140px)}
+.build a{color:var(--earth)}
+.build .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.build p{margin-top:18px;max-width:34em}
+.build .log{width:min(320px,70vw);margin:0 0 8px}
+.build .log svg{width:100%;height:auto;display:block;overflow:visible}
+.wedge{will-change:transform}
+.build .pics{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:end}
+.build .pics img{width:100%;object-fit:cover;border-radius:6px}
+.build .pics .tall{aspect-ratio:2/3}
+.build .pics .short{aspect-ratio:3/4}
+.build .cap{color:#cfc8b8}
+ul.made{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;font-size:17px}
+ul.made li{border-top:1px solid #3d4134;padding-top:10px}
+ul.made b{color:var(--earth);font-weight:700}
+@media (max-width:860px){.build .inner{grid-template-columns:1fr}}
+
+/* Garden: an uneven wall of their own wildlife photos */
+.garden{padding-block:clamp(72px,10vw,140px)}
+.garden .head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.garden .lede{margin-top:16px}
+.critters{margin-top:clamp(30px,4vw,52px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;align-items:start}
+.critters figure img{width:100%;object-fit:cover;border-radius:6px}
+.critters .k1{grid-column:1/6}.critters .k1 img{aspect-ratio:3/4}
+.critters .k2{grid-column:6/9;margin-top:60px}.critters .k2 img{aspect-ratio:3/4}
+.critters .k3{grid-column:9/13}.critters .k3 img{aspect-ratio:4/5}
+.critters .k4{grid-column:6/10;margin-top:-120px}.critters .k4 img{aspect-ratio:1/1}
+@media (max-width:760px){
+  .garden .head{grid-template-columns:1fr}
+  .critters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .critters .k1,.critters .k2,.critters .k3,.critters .k4{grid-column:auto;margin-top:0}
+  .critters .k2{margin-top:40px}.critters .k4{margin-top:-40px}
+}
+
+/* Stirling: a plain list of real distances */
+.village{background:var(--earth-soft);padding-block:clamp(72px,10vw,140px)}
+.village .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.village .wide{grid-column:1/-1}
+.village .wide img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:6px}
+table.dist{width:100%;border-collapse:collapse;margin-top:22px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--pine-soft);padding:0 0 8px;font-weight:500}
+table.dist td{padding:12px 0;border-top:1px solid #e6cfa6;vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.addr{margin-top:20px;font-size:16px}
+@media (max-width:860px){.village .inner{grid-template-columns:1fr}.village .wide img{aspect-ratio:4/3}}
+
+/* Guests */
+.guests{padding-block:clamp(72px,10vw,130px)}
+.score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-size:clamp(64px,9vw,118px);font-weight:700;line-height:.9;font-variant-numeric:tabular-nums;color:var(--ash)}
+.score span{font-size:18px;max-width:20em}
+.quotes{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px)}
+.quotes .lead .quote{font-size:clamp(26px,3vw,38px);line-height:1.3}
+.quotes ul{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.quotes li{border-top:1px solid var(--line);padding-top:16px}
+.quotes li .quote{font-size:19px}
+.more{margin-top:30px;font-size:16px}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* Book */
+.book{padding-block:0 clamp(72px,10vw,130px)}
+.book .card{background:var(--pine);color:var(--wall);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.book .card img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.book .body{padding:clamp(28px,4vw,56px)}
+.book .body p{margin-top:14px;max-width:32em}
+.book .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.book .btn.line{color:var(--wall);box-shadow:inset 0 0 0 2px var(--wall)}
+.book .btn.line:hover{background:#34382b}
+.book dl{margin:28px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;font-size:16px}
+.book dt{color:var(--earth);font-weight:700}
+.book dd{margin:0;overflow-wrap:anywhere}
+.book a{color:var(--earth)}
+@media (max-width:860px){.book .card{grid-template-columns:1fr}.book .card img{min-height:0;aspect-ratio:3/2}}
+
+/* Close: the boards close up again behind the name */
+.close{position:relative;overflow:hidden;color:var(--wall);text-align:center;padding-block:clamp(90px,14vw,180px)}
+.close .bg{position:absolute;inset:0}
+.close .bg img{width:100%;height:100%;object-fit:cover}
+.close .sign{position:relative;display:inline-block;background:var(--pine);padding:clamp(26px,4vw,44px) clamp(26px,5vw,60px);border-radius:6px;margin:0 var(--gut-r) 0 var(--gut);max-width:calc(100% - 40px)}
+.close .sign p.name{font-family:var(--display);font-weight:700;font-size:clamp(30px,5.4vw,60px);line-height:1.1}
+.close .sign p.words{margin-top:12px;font-size:18px;color:var(--earth)}
+.close .sign .btn{margin-top:24px}
+
+footer{background:var(--pine);color:#d9d3c4;font-size:15px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+footer a{color:#fff}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(251,250,247,.97);border-top:1px solid var(--line);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .mill{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--wall)}
+  .boards{display:none}
+  .plane{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .plane img{height:auto;aspect-ratio:3/2}
+  .house{order:1}.cue-house{order:2}.inside{order:3}.cue-inside{order:4}
+  .copy-a{position:relative;order:0;left:auto;right:auto;top:auto;max-width:none;border-radius:0;margin:0;padding-top:96px;transform:none !important;opacity:1 !important}
+  .cue{position:relative;opacity:1 !important;transform:none !important;left:auto;right:auto;bottom:auto;max-width:none}
+  .cue .panel{border-radius:0;background:var(--pine)}
+  .reveal{clip-path:none !important}
+  .wedge{transform:none !important}
+  .phonebar,.phonebar.on{transition:none}
+  .pan.pinned{height:auto !important}
+  .pan.pinned .pan-stage{position:relative;height:auto}
+  .rail{transform:none !important;overflow-x:auto}
+}
+/* Without JavaScript: the same still layout */
+  .nojs .mill{height:auto}
+  .nojs .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--wall)}
+  .nojs .boards{display:none}
+  .nojs .plane{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .nojs .plane img{height:auto;aspect-ratio:3/2}
+  .nojs .house{order:1}.nojs .cue-house{order:2}.nojs .inside{order:3}.nojs .cue-inside{order:4}
+  .nojs .copy-a{position:relative;order:0;left:auto;right:auto;top:auto;max-width:none;border-radius:0;margin:0;padding-top:96px;transform:none !important;opacity:1 !important}
+  .nojs .cue{position:relative;opacity:1 !important;transform:none !important;left:auto;right:auto;bottom:auto;max-width:none}
+  .nojs .cue .panel{border-radius:0;background:var(--pine)}
+  .nojs .reveal{clip-path:none !important}
+  .nojs .wedge{transform:none !important}
+  .nojs .phonebar,.nojs .phonebar.on{transition:none}
+  .nojs .pan.pinned{height:auto !important}
+  .nojs .pan.pinned .pan-stage{position:relative;height:auto}
+  .nojs .rail{transform:none !important;overflow-x:auto}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Stirling Creek Cottage. Not their official site.</p>
+
+<header class="top">
+  <a class="mark" href="#mill" aria-label="Stirling Creek Cottage, back to top">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#b4501a"/><g stroke="#fbfaf7" stroke-width="1.5"><path d="M16 1v30M1 16h30M5.4 5.4l21.2 21.2M26.6 5.4 5.4 26.6"/></g><circle cx="16" cy="16" r="3" fill="#23261d"/></svg>
+    <span>Stirling Creek Cottage</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#build">How it was built</a>
+    <a href="#village">Stirling</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="mill" id="mill" aria-label="Stirling Creek Cottage from the garden">
+  <div class="stage">
+    <div class="plane inside" aria-hidden="true">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/inside-2000.jpg">
+        <img src="img/inside-1100.jpg" alt="" width="1100" height="1128">
+      </picture>
+    </div>
+    <div class="plane house">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/house-2000.jpg">
+        <img src="img/house-1100.jpg" alt="The two-storey timber house in its garden, with a deck, big cedar-framed windows and solar panels on the roof" width="1100" height="1044">
+      </picture>
+    </div>
+    <div class="boards" id="boards" aria-hidden="true"></div>
+    <div class="copy-a" id="copyA">
+      <p class="where">11 Gould Road, Stirling, in the Adelaide Hills</p>
+      <h1>Stirling Creek Cottage</h1>
+      <p class="lede">A timber and rammed earth house beside a running creek, five minutes' walk from Stirling village.</p>
+    </div>
+    <div class="cue cue-house" id="cueHouse">
+      <div class="panel">
+        <h2>Twelve old pine trees made the walls.</h2>
+        <p>The boards were cut from trees that once lined Victorian farm driveways, and each tree became one wall of the house.</p>
+      </div>
+    </div>
+    <div class="cue cue-inside" id="cueInside">
+      <div class="panel">
+        <h2>Inside, under the curved ceiling</h2>
+        <p>The ceiling is radial-cut Silvertop Ash, arched like the hull of an old wooden ship. Two sets of French doors open onto the deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="creek wrap" id="creek">
+  <div class="inner">
+    <figure>
+      <div class="reveal" id="creekReveal">
+        <img src="img/creek-rush.jpg" alt="The creek running fast over rocks below the garden, with pink flowers in front" width="1400" height="1050" loading="lazy">
+      </div>
+      <figcaption class="cap">The creek at the bottom of the garden, in winter.</figcaption>
+    </figure>
+    <div>
+      <h2 class="big">The creek out the back</h2>
+      <p class="lede">In winter the creek runs fast below the garden and you can hear it from inside, with the log fire going. In the warmer months the French doors open to the deck, and the jasmine comes in.</p>
+      <blockquote>
+        <p class="quote">"Lovely in winter time with the babbling brook in the rear garden and the peaceful walking trail into Stirling."</p>
+        <p class="who">Jaeden, stayed July 2026, on Airbnb</p>
+      </blockquote>
+      <div class="fire">
+        <img src="img/fire.jpg" alt="The wood fire with a basket of split logs, and a bedroom through the doorway" width="1000" height="1499" loading="lazy">
+        <img src="img/sofa.jpg" alt="A white sofa by the window, with autumn trees and the garden outside" width="1000" height="1497" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="house-s" id="house">
+  <div class="house-head wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The house</h2>
+        <p class="lede">Two storeys on a steep garden block. The king bedroom and its ensuite are upstairs with the living room. The two queen bedrooms and a second bathroom are downstairs.</p>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 6</dt><dd>Three bedrooms: one king, two queens.</dd>
+        <dt>Bathrooms</dt><dd>Two, one with a big freestanding bath.</dd>
+        <dt>Living</dt><dd>Open-plan kitchen, dining and lounge under the timber ceiling, with the log fire (not used in the Fire Ban Season).</dd>
+        <dt>Work</dt><dd>A desk by the window, and wifi.</dd>
+        <dt>Outside</dt><dd>The deck and garden balcony, outdoor dining and a barbecue.</dd>
+        <dt>Also</dt><dd>Washing machine, air conditioning, TV and secure parking. Pets: ask first.</dd>
+        <dt>Arriving</dt><dd>Self check-in with a keypad from 3 pm. Check out by 11 am.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pan" id="pan">
+    <div class="pan-stage">
+      <div class="rail" id="rail" tabindex="0" aria-label="Photos of the rooms">
+        <figure><img src="img/living.jpg" srcset="img/living-800.jpg 800w, img/living.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The lounge under the curved timber ceiling, with windows on three sides" width="1200" height="800" loading="lazy"><figcaption>The lounge</figcaption></figure>
+        <figure><img src="img/kitchen.jpg" srcset="img/kitchen-800.jpg 800w, img/kitchen.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The long kitchen with timber cupboards, a black benchtop and pendant lights" width="1200" height="802" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+        <figure><img src="img/lounge.jpg" srcset="img/lounge-800.jpg 800w, img/lounge.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The dining table by the kitchen, and a long low bookshelf" width="1200" height="800" loading="lazy"><figcaption>Dining, and the bookshelf</figcaption></figure>
+        <figure><img src="img/study.jpg" srcset="img/study-800.jpg 800w, img/study.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="A desk by the French doors, next to the rammed earth wall" width="1200" height="851" loading="lazy"><figcaption>The desk by the French doors</figcaption></figure>
+        <figure><img src="img/king.jpg" srcset="img/king-800.jpg 800w, img/king.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The king bedroom with a wall of windows onto the trees" width="1200" height="675" loading="lazy"><figcaption>The king bedroom</figcaption></figure>
+        <figure><img src="img/queen.jpg" srcset="img/queen-800.jpg 800w, img/queen.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="A queen bedroom with a black iron bed and a big window onto autumn leaves" width="1200" height="802" loading="lazy"><figcaption>A queen bedroom</figcaption></figure>
+        <figure><img src="img/queen2.jpg" srcset="img/queen2-800.jpg 800w, img/queen2.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The second queen bedroom with blue and white linen" width="1200" height="802" loading="lazy"><figcaption>The second queen bedroom</figcaption></figure>
+        <figure><img src="img/bath.jpg" srcset="img/bath-800.jpg 800w, img/bath.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="A freestanding bath on a patterned tile floor, with a dark tiled wall" width="1200" height="709" loading="lazy"><figcaption>The bath</figcaption></figure>
+        <figure><img src="img/shower.jpg" srcset="img/shower-800.jpg 800w, img/shower.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="A bathroom with a glass shower, blue tiles and a timber vanity" width="1200" height="802" loading="lazy"><figcaption>The second bathroom</figcaption></figure>
+        <figure><img src="img/deck.jpg" srcset="img/deck-800.jpg 800w, img/deck.jpg 1200w" sizes="(max-width:899px) 80vw, 62vw" alt="The deck with an outdoor table under a white umbrella, among the trees" width="1200" height="802" loading="lazy"><figcaption>The deck</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="build wrap" id="build">
+  <div class="inner">
+    <div>
+      <div class="log" id="log" aria-hidden="true">
+        <svg viewBox="-120 -120 240 240" id="logSvg"></svg>
+      </div>
+      <h2 class="big">How it was built</h2>
+      <p>The house went up in 2002. The family who built it designed it themselves, facing north so the winter sun reaches the rooms and the solar panels, and did much of the building with their own hands.</p>
+      <p>The cladding came from old pine trees that lined farm driveways in rural Victoria. A mill in Yarram cut them radially, into wedges like a cake, then into boards. Twelve trees came to the site, and the boards were numbered so each tree stayed together.</p>
+      <ul class="made">
+        <li><b>Ceiling:</b> radial-cut Silvertop Ash, curved</li>
+        <li><b>Walls:</b> rammed earth and double-glazed windows in cedar frames</li>
+        <li><b>Floors:</b> Rose Gum boards</li>
+        <li><b>Power and heat:</b> solar panels, solar hot water, and a wood fire with a wet back that helps heat the water</li>
+        <li><b>Car:</b> an electric vehicle charger in the garage</li>
+      </ul>
+      <p>The house was opened to the public for Sustainable House Day in 2015 and 2016.</p>
+    </div>
+    <div class="pics">
+      <figure><img class="tall" src="img/cladding.jpg" alt="The west wall of radial-cut pine boards with their wavy edges, against a deep blue sky" width="1000" height="1497" loading="lazy"><figcaption class="cap">The radial-cut boards.</figcaption></figure>
+      <figure><img class="short" src="img/earthwall.jpg" alt="The rammed earth wall inside, with photos of the build pegged on it" width="900" height="1200" loading="lazy"><figcaption class="cap">Photos of the build, on the rammed earth wall.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="garden wrap" id="garden">
+  <div class="inner">
+    <div class="head">
+      <h2 class="big">Who else lives in the garden</h2>
+      <p class="lede">Koalas in the gums, kookaburras and black cockatoos, the odd kangaroo, and a possum that comes for the vine outside the lounge window most evenings.</p>
+    </div>
+    <div class="critters">
+      <figure class="k1"><img src="img/koala.jpg" alt="A koala in the fork of a gum tree" width="900" height="1200" loading="lazy"><figcaption class="cap">In the gums.</figcaption></figure>
+      <figure class="k2"><img src="img/kookaburras.jpg" alt="Two kookaburras on the paving by a stone wall" width="900" height="1200" loading="lazy"><figcaption class="cap">By the stone wall.</figcaption></figure>
+      <figure class="k3"><img src="img/kangaroo.jpg" alt="A kangaroo on the lawn among the ferns" width="800" height="1434" loading="lazy"><figcaption class="cap">On the lawn.</figcaption></figure>
+      <figure class="k4"><img src="img/possum.jpg" alt="A possum on a fence post at night" width="800" height="1067" loading="lazy"><figcaption class="cap">Evening visitor.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="village wrap" id="village">
+  <div class="inner">
+    <figure class="wide">
+      <img src="img/creek-fence.jpg" alt="The creek winding past an old picket fence under big trees" width="1400" height="1050" loading="lazy">
+    </figure>
+    <div>
+      <h2 class="big">Five minutes to the village</h2>
+      <p class="lede" style="margin-top:16px">A walking trail leads from the garden into Stirling, so you can walk to brunch, the pub and Restaurant Aptos, which got its Michelin star this year.</p>
+      <p class="addr">11 Gould Road, Stirling SA 5152</p>
+    </div>
+    <div>
+      <table class="dist">
+        <thead><tr><th scope="col">From the front door</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Stirling Hotel</td><td>750 m walk</td></tr>
+          <tr><td>Library Lawns</td><td>about 10 min walk</td></tr>
+          <tr><td>Druid Avenue</td><td>1.1 km walk</td></tr>
+          <tr><td>Hahndorf</td><td>12 km</td></tr>
+          <tr><td>Adelaide city</td><td>17 km</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <div class="score"><b>4.85</b><span>out of 5 from 60 reviews on Airbnb, and a Guest favourite.</span></div>
+    <div class="quotes">
+      <blockquote class="lead" style="margin:0">
+        <p class="quote">"Nothing quite like waking up in a “tree house” surrounded by a flowing creek."</p>
+        <p class="who">Leah, stayed July 2026</p>
+      </blockquote>
+      <ul>
+        <li><p class="quote">"The entry to the cabin welcomed us with the smell of timber, perhaps from the beautifully curved timber ceiling."</p><p class="who">Greg, stayed March 2026</p></li>
+        <li><p class="quote">"With the wood-fire place and plenty of chopped fire wood at our disposal, we could sit back, relax and enjoy the beautiful surroundings the house offers."</p><p class="who">Dan, stayed July 2026</p></li>
+        <li><p class="quote">"We enjoyed our little walks along the creek."</p><p class="who">Elise, stayed November 2026</p></li>
+      </ul>
+    </div>
+    <p class="more"><a href="https://www.airbnb.com.au/rooms/1391784819837073642/reviews" rel="noopener">Read all 60 reviews on Airbnb</a></p>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div class="card">
+      <img src="img/deck-800.jpg" alt="The deck among the trees, with a table under a white umbrella" width="800" height="534" loading="lazy">
+      <div class="body">
+        <h2 class="big">Check dates</h2>
+        <p>Bookings go through Airbnb for now. For anything else, like bringing a dog or a late check-out, ask Hannah.</p>
+        <div class="acts">
+          <a class="btn" href="https://www.airbnb.com.au/rooms/1391784819837073642" rel="noopener">Check dates on Airbnb</a>
+          <a class="btn line" href="tel:+61410686908">Call 0410 686 908</a>
+        </div>
+        <dl>
+          <dt>Email</dt><dd><a href="mailto:Stirlingcreekcottage@gmail.com">Stirlingcreekcottage@gmail.com</a></dd>
+          <dt>Price</dt><dd>From $415 a night, more at peak holiday times</dd>
+          <dt>Sleeps</dt><dd>6, in a king and two queens</dd>
+          <dt>Times</dt><dd>In from 3 pm, out by 11 am</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Stirling Creek Cottage">
+  <div class="bg" aria-hidden="true"><img src="img/boards-wide.jpg" alt="" width="1029" height="1015" loading="lazy"></div>
+  <div class="sign">
+    <p class="name">Stirling Creek Cottage</p>
+    <p class="words">Nature. Design. Eco-friendly. Luxe.</p>
+    <a class="btn" href="https://www.airbnb.com.au/rooms/1391784819837073642" rel="noopener">Check dates</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Stirling Creek Cottage. Not affiliated, not live.</p>
+    <p>Photos and words from Stirling Creek Cottage's own website, Instagram and Airbnb listing. Reviews from Airbnb.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="https://www.airbnb.com.au/rooms/1391784819837073642" rel="noopener">Check dates</a>
+  <a class="btn line" href="tel:+61410686908">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phone = window.matchMedia('(max-width: 699px)').matches;
+  var clamp = function(v,a,b){return Math.max(a,Math.min(b,v));};
+  var seg = function(p,a,b){return clamp((p-a)/(b-a),0,1);};
+  var ease = function(t){return 1-Math.pow(1-t,3);};
+
+  // Boards: strips of their own cladding photo, each a horizontal slice of the same image.
+  var boardsEl = document.getElementById('boards');
+  var N = phone ? 14 : 9, boards = [];
+  if (!reduce) {
+    var src = phone ? 'img/boards-tall.jpg' : 'img/boards-wide.jpg';
+    for (var i = 0; i < N; i++) {
+      var b = document.createElement('div'); b.className = 'board';
+      b.style.top = (i * 100 / N) + '%'; b.style.height = 'calc(' + (100 / N) + '% + 1px)';
+      var g = document.createElement('div'); g.className = 'grain';
+      g.style.top = (-i * 100) + '%'; g.style.height = (N * 100) + '%';
+      var im = document.createElement('img'); im.src = src; im.alt = ''; im.decoding = 'async';
+      g.appendChild(im); b.appendChild(g); boardsEl.appendChild(b); boards.push(b);
+    }
+  }
+
+  var mill = document.getElementById('mill');
+  var house = document.querySelector('.house'), inside = document.querySelector('.inside');
+  var copyA = document.getElementById('copyA'), cueH = document.getElementById('cueHouse'), cueI = document.getElementById('cueInside');
+  var creek = document.getElementById('creekReveal');
+  var pan = document.getElementById('pan'), rail = document.getElementById('rail');
+  var bar = document.getElementById('phonebar');
+
+  // Log end for "How it was built": rings and eight wedges
+  var svg = document.getElementById('logSvg'), wedges = [];
+  (function(){
+    var ns = 'http://www.w3.org/2000/svg', W = 8, R = 100;
+    for (var k = 0; k < W; k++) {
+      var a0 = (k / W) * Math.PI * 2 - Math.PI / 2, a1 = ((k + 1) / W) * Math.PI * 2 - Math.PI / 2;
+      var gEl = document.createElementNS(ns, 'g'); gEl.setAttribute('class', 'wedge');
+      var d = 'M0 0 L' + (R * Math.cos(a0)).toFixed(2) + ' ' + (R * Math.sin(a0)).toFixed(2) + ' A' + R + ' ' + R + ' 0 0 1 ' + (R * Math.cos(a1)).toFixed(2) + ' ' + (R * Math.sin(a1)).toFixed(2) + ' Z';
+      var p = document.createElementNS(ns, 'path'); p.setAttribute('d', d); p.setAttribute('fill', k % 2 ? '#c98a55' : '#d39a63'); p.setAttribute('stroke', '#23261d'); p.setAttribute('stroke-width', '1.5');
+      gEl.appendChild(p);
+      for (var r = 18; r < R; r += 14 + (r % 3)) {
+        var arc = document.createElementNS(ns, 'path');
+        arc.setAttribute('d', 'M' + (r * Math.cos(a0)).toFixed(2) + ' ' + (r * Math.sin(a0)).toFixed(2) + ' A' + r + ' ' + r + ' 0 0 1 ' + (r * Math.cos(a1)).toFixed(2) + ' ' + (r * Math.sin(a1)).toFixed(2));
+        arc.setAttribute('fill', 'none'); arc.setAttribute('stroke', '#9a5f33'); arc.setAttribute('stroke-width', '1.2');
+        gEl.appendChild(arc);
+      }
+      var bark = document.createElementNS(ns, 'path');
+      bark.setAttribute('d', 'M' + (R * Math.cos(a0)).toFixed(2) + ' ' + (R * Math.sin(a0)).toFixed(2) + ' A' + R + ' ' + R + ' 0 0 1 ' + (R * Math.cos(a1)).toFixed(2) + ' ' + (R * Math.sin(a1)).toFixed(2));
+      bark.setAttribute('fill', 'none'); bark.setAttribute('stroke', '#5a4535'); bark.setAttribute('stroke-width', '7');
+      gEl.appendChild(bark);
+      var mid = (a0 + a1) / 2; gEl._dx = Math.cos(mid); gEl._dy = Math.sin(mid);
+      svg.appendChild(gEl); wedges.push(gEl);
+    }
+  })();
+  var logBox = document.getElementById('log');
+
+  function sizePan(){
+    if (reduce) return;
+    var travel = Math.max(0, rail.scrollWidth - window.innerWidth);
+    pan.classList.add('pinned');
+    travel = Math.max(0, rail.scrollWidth - window.innerWidth);
+    pan.style.setProperty('--pan-h', (window.innerHeight + travel * (phone ? 1.1 : 1)) + 'px');
+    pan._travel = travel;
+  }
+
+  function frame(){
+    var vh = window.innerHeight;
+    // the boards, the house, the room
+    var r = mill.getBoundingClientRect();
+    var p = clamp(-r.top / Math.max(1, r.height - vh), 0, 1);
+    if (!reduce) {
+      var open = ease(seg(p, 0.08, 0.42));
+      for (var i = 0; i < boards.length; i++) {
+        var dir = i % 2 ? 1 : -1;
+        var stagger = seg(open, (i % 4) * 0.06, 0.76 + (i % 4) * 0.06);
+        boards[i].style.transform = 'translate3d(' + (dir * stagger * 104) + '%,0,0)';
+      }
+      copyA.style.opacity = 1 - seg(p, 0.1, 0.24);
+      copyA.style.transform = 'translate3d(0,' + (-seg(p, 0.1, 0.24) * 40) + 'px,0)';
+      var hs = 1.12 - 0.12 * ease(seg(p, 0.08, 0.45));
+      var push = ease(seg(p, 0.6, 0.86));
+      house.style.transform = 'scale(' + (hs + push * 0.9).toFixed(4) + ')';
+      house.style.opacity = 1 - seg(p, 0.7, 0.86);
+      inside.style.transform = 'scale(' + (1.18 - 0.18 * ease(seg(p, 0.68, 1))).toFixed(4) + ')';
+      var ch = seg(p, 0.4, 0.48) * (1 - seg(p, 0.58, 0.64));
+      cueH.style.opacity = ch; cueH.style.transform = 'translate3d(0,' + ((1 - ch) * 16) + 'px,0)';
+      var ci = seg(p, 0.84, 0.92);
+      cueI.style.opacity = ci; cueI.style.transform = 'translate3d(0,' + ((1 - ci) * 16) + 'px,0)';
+
+      // creek wipe
+      var cr = creek.getBoundingClientRect();
+      var w = clamp((cr.top - vh * 0.3) / (vh * 0.6), 0, 1);
+      creek.style.setProperty('--wipe', (w * 100).toFixed(1) + '%');
+
+      // rooms rail
+      if (pan.classList.contains('pinned')) {
+        var pr = pan.getBoundingClientRect();
+        var pp = clamp(-pr.top / Math.max(1, pr.height - vh), 0, 1);
+        rail.style.transform = 'translate3d(' + (-pp * (pan._travel || 0)) + 'px,0,0)';
+      }
+
+      // log end splits into wedges
+      var lr = logBox.getBoundingClientRect();
+      var lp = ease(clamp((vh * 0.85 - lr.top) / (vh * 0.55), 0, 1));
+      for (var k = 0; k < wedges.length; k++) {
+        wedges[k].style.transform = 'translate(' + (wedges[k]._dx * lp * 16).toFixed(2) + 'px,' + (wedges[k]._dy * lp * 16).toFixed(2) + 'px)';
+      }
+    }
+    // phone booking bar shows once the hero is passed
+    var past = r.bottom < vh * 0.6;
+    var bk = document.getElementById('book').getBoundingClientRect();
+    var onBook = bk.top < vh && bk.bottom > 0;
+    bar.classList.toggle('on', past && !onBook);
+  }
+
+  var ticking = false;
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(function(){ ticking = false; frame(); }); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', function(){ phone = window.matchMedia('(max-width: 699px)').matches; sizePan(); frame(); });
+  window.addEventListener('load', function(){ sizePan(); frame(); });
+  sizePan(); frame();
+  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', function(){ location.reload(); });
+})();
+</script>
+</body>
+</html>
